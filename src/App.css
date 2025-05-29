@@ -1,0 +1,232 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --note-bg: #FFF176;
+  --bg-light: #F1F3F9;
+  --font: #282f3a;
+}
+
+@media only screen and (max-width: 700px) {
+  .body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    padding: 10px;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    max-width: 300px;
+    max-height: 500px;
+  }
+
+  .popup-note {
+    max-width: 80%;
+    margin: 20px;
+  }
+
+  .note-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .note-content h1 {
+    font-size: 30px;
+    padding: 10px;
+  }
+
+  textarea {
+    max-width: 280px;
+  }
+
+  ul {
+    flex-direction: column;
+  }
+
+}
+
+#root {
+  margin: auto;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin: 0;
+  background-color: var(--bg-light);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin: auto;
+  padding: 10px;
+
+  >img {
+    width: 30px;
+    padding: 10px;
+  }
+
+  >h1 {
+    color: var(--font);
+    font-size: 32px;
+  }
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  width: 80%;
+  height: 530px;
+  background-color: #ffffff;
+  padding: 20px;
+  margin: auto;
+}
+
+.add-note-container {
+  padding: 10px;
+  margin: 10px;
+}
+
+.add-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-light);
+  width: 220px;
+  height: 200px;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 8px 8px 8px #0000001c;
+}
+
+/* SALVED NOTES */
+.salved-notes-container {
+  overflow: hidden;
+  overflow-y: auto;
+  scrollbar-color: transparent transparent;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+li {
+  background-color: var(--note-bg);
+  padding: 20px;
+  height: 200px;
+  width: 200px;
+  margin: 10px 20px 20px 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 8px 8px 8px #0000001c;
+}
+
+li span {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  flex-grow: 1;
+  word-wrap: break-word;
+  overflow-y: scroll;
+}
+
+.delete-note {
+  background-color: #3730A3;
+  color: #fff;
+  width: 100px;
+  margin: 4px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* SAVE NOTE POPUP */
+.popup-note {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 300px;
+  padding: 30px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  box-shadow: 0px 0px 10px #b3b3b391;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.note-content {
+  color: var(--font);
+  font-size: 15px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  font-size: 33px;
+}
+
+textarea {
+  color: #374151;
+  width: 300px;
+  height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 2px solid #3730A3;
+  border-radius: 8px;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.b-submit,
+.b-close {
+  background-color: #3830a3;
+  color: #fff;
+  font-size: 15px;
+  width: 100px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.b-close {
+  background-color: #9CA3AF;
+}
