@@ -189,12 +189,18 @@ li span {
 .note-content {
   color: var(--font);
   font-size: 15px;
+  margin: 10px;
 }
 
-h1 {
+.note-content h1 {
   display: flex;
   justify-content: center;
   font-size: 33px;
+  margin: auto;
+}
+
+.note-content span {
+  padding: 0 7px;
 }
 
 textarea {
